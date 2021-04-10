@@ -25,15 +25,15 @@ function kiesFilm(){
         if(nummer>=0 && nummer<=10 ){
           eigenTopFilms.push(topFilms[nummer - 1]); 
           naam=document.querySelector(".imdb-film"+nummer).innerHTML;
-          let toegevoegd1= document.querySelector(".eigen-film"+filmnummer);
-          toegevoegd1.innerHTML=naam;
+          let toegevoegd= document.querySelector(".eigen-film"+filmnummer);
+          toegevoegd.innerHTML=naam;
           console.log(eigenTopFilms);
           document.querySelector(".imdb-film"+nummer).style.textDecoration = "line-through";
           filmnummer++;
           document.querySelector('.kiesfilm-button').innerText = 'Kies Film voor plek ' + filmnummer;
-          if (filmnummer>3){
+            if (filmnummer>3){
            document.querySelector('.kiesfilm-button').innerText = 'KLAAR';
-          }
+         }
         }
        
     }
